@@ -3,6 +3,8 @@ $icon-font-path: '/assets/fonts/bootstrap/';
 $fa-font-path: '/assets/fonts/font-awesome/';
 @import '~font-awesome/scss/font-awesome';
 
+@import '/assets/buttons/buttons.css';
+
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 
 /**
@@ -19,8 +21,18 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'admin/admin';
+@import 'congratulations/congratulations';
 @import 'main/main';
+@import 'merchants/merchants';
+@import 'security/security';
+@import 'securityquiz/securityquiz';
 @import 'unlockether/unlockether';
+@import 'whatisblockchain/whatisblockchain';
+@import 'whatisblockchainquiz/whatisblockchainquiz';
+@import 'whatisether/whatisether';
+@import 'whatisetherquiz/whatisetherquiz';
+@import 'yourwallet/yourwallet';
+@import 'yourwalletquiz/yourwalletquiz';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 /* endinject */

@@ -34,6 +34,8 @@ import SecurityComponent from './security/security.component';
 import SecurityquizComponent from './securityquiz/securityquiz.component';
 import YourwalletComponent from './yourwallet/yourwallet.component';
 import YourwalletquizComponent from './yourwalletquiz/yourwalletquiz.component';
+import CongratulationsComponent from './congratulations/congratulations.component';
+import MerchantsComponent from './merchants/merchants.component';
 
 
 import './app.scss';
@@ -42,7 +44,7 @@ angular.module('coingivrApp', [ngCookies, ngResource, ngSanitize, 'btford.socket
   uiBootstrap, _Auth, account, admin, 'validation.match', navbar, footer, main, unlockether, constants,
   socket, util, WhatisblockchainComponent, WhatisblockchainquizComponent, WhatisetherComponent,
   WhatisetherquizComponent, SecurityComponent, SecurityquizComponent, YourwalletComponent,
-  YourwalletquizComponent
+  YourwalletquizComponent, CongratulationsComponent, MerchantsComponent
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
