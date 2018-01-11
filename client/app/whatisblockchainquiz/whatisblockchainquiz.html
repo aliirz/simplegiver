@@ -6,19 +6,19 @@
   <br />
   <br />
   <div class="row">
-    <button type="button" class="btn btn-primary btn-lg btn-block">a data-base controlled by Bitcoin Inc. that is impossible to hack</button>
+    <button type="button" class="btn btn-lg btn-block" ng-class="{'btn-primary': !whatisblockchainquizCtrl.w1, 'btn-danger': whatisblockchainquizCtrl.w1}" ng-click="whatisblockchainquizCtrl.wrongAnswer1()">a data-base controlled by Bitcoin Inc. that is impossible to hack</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">a super-computer that can instantly send money between any two people in the world without fees</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !whatisblockchainquizCtrl.w2, 'btn-danger': whatisblockchainquizCtrl.w2}" ng-click="whatisblockchainquizCtrl.wrongAnswer2()">a super-computer that can instantly send money between any two people in the world without fees</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">a digital ledger that can be verified by people all over the world without being controlled by a central entity</button>
+    <button type="button" class="btn btn-lg btn-block" ng-class="{'btn-primary': !whatisblockchainquizCtrl.isAddButton, 'btn-success': whatisblockchainquizCtrl.isAddButton}" ng-click="whatisblockchainquizCtrl.toggleClass(); whatisblockchainquizCtrl.correctAnswer()">a digital ledger that can be verified by people all over the world without being controlled by a central entity</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">a new kind of digital currency that governments can’t track</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !whatisblockchainquizCtrl.w3, 'btn-danger': whatisblockchainquizCtrl.w3}" ng-click="whatisblockchainquizCtrl.wrongAnswer3()">a new kind of digital currency that governments can’t track</button>
   </div>
   <br />
   <br />
   <div class="row">
     <div class="col-lg-12 text-center">
-      <a ui-sref="whatisether" class="btn btn-lg btn-default">NEXT STEP</a>
+      <a ng-hide="!whatisblockchainquizCtrl.moveAhead" ui-sref="whatisether" class="btn btn-lg btn-default">NEXT STEP</a>
     </div>
   </div>
   <br />

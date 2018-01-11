@@ -6,19 +6,19 @@
   <br />
   <br />
   <div class="row">
-    <button type="button" class="btn btn-primary btn-lg btn-block">Bitcoin transactions can be monitored by governments, but the Ethereum network is totally untraceable</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !whatisetherquizCtrl.w1, 'btn-danger': whatisetherquizCtrl.w1}" ng-click="whatisetherquizCtrl.wrongAnswer1()">Bitcoin transactions can be monitored by governments, but the Ethereum network is totally untraceable</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">Ethereum’s fees are a percentage of the amount you send, while Bitcoin charges a flat fee</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !whatisetherquizCtrl.w2, 'btn-danger': whatisetherquizCtrl.w2}" ng-click="whatisetherquizCtrl.wrongAnswer2()">Ethereum’s fees are a percentage of the amount you send, while Bitcoin charges a flat fee</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">Bitcoin has many different use cases while Ethereum is a platform focused only on creating contracts</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !whatisetherquizCtrl.w3, 'btn-danger': whatisetherquizCtrl.w3}" ng-click="whatisetherquizCtrl.wrongAnswer3()">Bitcoin has many different use cases while Ethereum is a platform focused only on creating contracts</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">Ethereum allows for programming of “smart contracts” which enable much more than sending money</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !whatisetherquizCtrl.isAddButton, 'btn-success': whatisetherquizCtrl.isAddButton}" ng-click="whatisetherquizCtrl.toggleClass(); whatisetherquizCtrl.correctAnswer()">Ethereum allows for programming of “smart contracts” which enable much more than sending money</button>
   </div>
   <br />
   <br />
   <div class="row">
     <div class="col-lg-12 text-center">
-      <a ui-sref="security" class="btn btn-lg btn-default">NEXT STEP</a>
+      <a ng-hide="!whatisetherquizCtrl.moveAhead" ui-sref="security" class="btn btn-lg btn-default">NEXT STEP</a>
     </div>
   </div>
   <br />

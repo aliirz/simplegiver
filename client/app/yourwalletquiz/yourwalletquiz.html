@@ -7,19 +7,19 @@ double-check before sending Ether?</h1>
   <br />
   <br />
   <div class="row">
-    <button type="button" class="btn btn-primary btn-lg btn-block">the address you are sending Ether to</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !yourwalletquizCtrl.isAddButton1, 'btn-success': yourwalletquizCtrl.isAddButton1}" ng-click="yourwalletquizCtrl.toggleClass1(); yourwalletquizCtrl.correctAnswer1()">the address you are sending Ether to</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">your wallet’s private key</button>
+    <button type="button" class="btn btn-lg btn-block" ng-class="{'btn-primary': !yourwalletquizCtrl.w1, 'btn-danger': yourwalletquizCtrl.w1}" ng-click="yourwalletquizCtrl.wrongAnswer1()">your wallet’s private key</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">the amount of Ether you are sending</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !yourwalletquizCtrl.isAddButton2, 'btn-success': yourwalletquizCtrl.isAddButton2}" ng-click="yourwalletquizCtrl.toggleClass2(); yourwalletquizCtrl.correctAnswer2()">the amount of Ether you are sending</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">the gas limit</button>
+    <button type="button" class="btn btn-lg btn-block" ng-class="{'btn-primary': !yourwalletquizCtrl.w2, 'btn-danger': yourwalletquizCtrl.w2}" ng-click="yourwalletquizCtrl.wrongAnswer2()">the gas limit</button>
   </div>
   <br />
   <br />
   <div class="row">
     <div class="col-lg-12 text-center">
-      <a ui-sref="congratulations" class="btn btn-lg btn-default">NEXT STEP</a>
+      <a ng-hide="!yourwalletquizCtrl.moveAhead1 && !yourwalletquizCtrl.moveAhead2" ui-sref="congratulations" class="btn btn-lg btn-default">NEXT STEP</a>
     </div>
   </div>
   <br />

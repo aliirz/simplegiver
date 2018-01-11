@@ -6,19 +6,19 @@
   <br />
   <br />
   <div class="row">
-    <button type="button" class="btn btn-primary btn-lg btn-block">your Ethereum network password</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !securityquizCtrl.w1, 'btn-danger': securityquizCtrl.w1}" ng-click="securityquizCtrl.wrongAnswer1()">your Ethereum network password</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">your Ether wallet’s private key</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !securityquizCtrl.isAddButton, 'btn-success': securityquizCtrl.isAddButton}" ng-click="securityquizCtrl.toggleClass(); securityquizCtrl.correctAnswer()">your Ether wallet’s private key</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">your Ether wallet’s public address</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !securityquizCtrl.w2, 'btn-danger': securityquizCtrl.w2}" ng-click="securityquizCtrl.wrongAnswer2()">your Ether wallet’s public address</button>
     <br />
-    <button type="button" class="btn btn-primary btn-lg btn-block">your private Blockchain access code</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-class="{'btn-primary': !securityquizCtrl.w3, 'btn-danger': securityquizCtrl.w3}" ng-click="securityquizCtrl.wrongAnswer3()">your private Blockchain access code</button>
   </div>
   <br />
   <br />
   <div class="row">
     <div class="col-lg-12 text-center">
-      <a ui-sref="yourwallet" class="btn btn-lg btn-default">NEXT STEP</a>
+      <a ng-hide="!securityquizCtrl.moveAhead" ui-sref="yourwallet" class="btn btn-lg btn-default">NEXT STEP</a>
     </div>
   </div>
   <br />
