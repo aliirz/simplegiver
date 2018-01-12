@@ -19,7 +19,7 @@ double-check before sending Ether?</h1>
   <br />
   <div class="row">
     <div class="col-lg-12 text-center">
-      <a ng-hide="!yourwalletquizCtrl.moveAhead1 && !yourwalletquizCtrl.moveAhead2" ui-sref="congratulations" class="btn btn-lg btn-default">NEXT STEP</a>
+      <a ng-show="yourwalletquizCtrl.bothAnswered()" ui-sref="congratulations" class="btn btn-lg btn-default">NEXT STEP</a>
     </div>
   </div>
   <br />

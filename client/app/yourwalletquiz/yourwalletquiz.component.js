@@ -24,6 +24,14 @@ export class YourwalletquizComponent {
     this.moveAhead2 = true;
   }
 
+  bothAnswered(){
+    if (this.moveAhead1 && this.moveAhead2) {
+      return true;
+    }
+    else {
+      false;
+    }
+  }
   wrongAnswer1() {
     this.w1 = true;
   }
